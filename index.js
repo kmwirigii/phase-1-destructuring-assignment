@@ -30,42 +30,33 @@ const nestedMuppet = {
 // 1. Use destructuring to assign appropriate variables based on the sounds animals make.
 const [moo, neigh, baa, oink, cluck] = farmAnimals.split(' ');
 
-// 2. Bolt the horse wandered off, so just give us four animals, and let's name them bessie, dolly, babe, and little.
+// 2. Bolt the horse wandered off, assign the remaining animals.
 const [bessie, , dolly, babe, little] = farmAnimals.split(' ');
 
-// 3. Little the chicken had to go back to the coop, so now we're left with three. Let's use color variables of blackAndWhite, black, and pink.
-const [blackAndWhite, black, pink] = ["cow", "sheep", "pig"]; 
+// 3. Chicken leaves, assign the remaining animals with descriptive color variables.
+const [blackAndWhite, , black, pink] = farmAnimals.split(' ');
 
 // Arrays
 
-// 4. Use destructuring to assign appropriate variables using the color names.
+// 4. Destructure to assign all rainbow color names.
 const [red, orange, yellow, green, blue, indigo, violet] = colors;
 
-// 5. Some people have a really hard time picking out indigo, so let's leave that one out, using the first letter of each color as the variable names.
+// 5. Leave out indigo, use first letters as variables.
 const [r, o, y, g, b, , v] = colors;
 
-// 6. But wait! Indigo is now feeling *super* left out. Let's only assign indigo using indg. 
-const [ , , , , , indg] = colors;
+// 6. Only assign indigo.
+const [, , , , , indg] = colors;
 
 // Objects
 
-// 7. Use destructuring to assign all variables using the keys as the variable names
+// 7. Use destructuring to assign all variables using the keys as the variable names.
 const { muppetName, color, song, job, partner } = muppet;
 
-// 8. Use destructuring to assign songs 2 and 4, and Kermit's job and partner
-const {
-  album: {
-    theMuppetMovie:{song2, song4}
+// 8. Assign songs 2 and 4, and Kermit's job and partner.
+const { 
+  album: { 
+    theMuppetMovie: { song2, song4 } 
   },
-  nestedJob,
-  nestedPartner
+  nestedJob, 
+  nestedPartner 
 } = nestedMuppet;
-
-console.log(moo, neigh, baa, oink, cluck);
-console.log(bessie, dolly, babe, little);
-console.log(blackAndWhite, black, pink);
-console.log(red, orange, yellow, green, blue, indigo, violet);
-console.log(r, o, y, g, b, v);
-console.log(indg);
-console.log(muppetName, color, song, job, partner);
-console.log(song2, song4, nestedJob, nestedPartner);
